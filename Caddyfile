@@ -1,0 +1,14 @@
+{
+    admin off
+}
+
+:8080 {
+    root * /app/public
+    php_index index.php
+    php
+    
+    file_server
+    
+    # Serve index.php as default
+    try_files {path} {path}/ /index.php?{query}
+}
